@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Astronomical Globe</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="globe.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <img src="assets/logo.png" alt="Logo" class="logo-img">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-prop">HOME</a></li>
+                    <li><a href="news.HTML" class="nav-prop">NEWS</a></li>
+                    <li><a href="about.html" class="nav-prop">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="info">
+        <h2>Astronomical Globe</h2>
+        <div id="sunInfo"></div>
+        <div id="moonInfo"></div>
+        <div id="coordinates"></div>
+    </div>
+    <div id="controls">
+        <h3>Controls</h3>
+        <label>
+            Rotation Speed:
+            <input type="range" id="rotationSpeed" min="0" max="100" value="50">
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="showMarkers" checked>
+            Show Astronomical Markers
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="showAtmosphere" checked>
+            Show Atmosphere
+        </label>
+    </div>
+
+    <!-- Three.js and its extensions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- SunCalc library -->
+    <script src="suncalc.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="globe.js"></script>
+</body>
+</html>

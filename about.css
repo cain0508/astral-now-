@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    animation: fadeDown 1s ease-in-out;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    color: #00ffe5;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeUp 1.2s ease-in-out;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00ffe5;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+}
+
+.team-member:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px #00ffe5aa;
+}
+
+.team-member h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #00ffe5;
+}
+
+.team-member h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #aaffff;
+}
+
+.team-member p {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.vision {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: auto;
+    animation: fadeUp 1.5s ease-in-out;
+}
+
+.vision h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00ffe5;
+}
+
+.vision p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .team-member {
+        padding: 1.5rem;
+    }
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.navbar {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0.5rem 2rem;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+    padding: 0.3rem 0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #707070, #1a1a1a);
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00ffe5;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-prop {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+    
+    .logo-text {
+        height: 35px;
+    }
+
+    .nav-prop {
+        font-size: 0.9rem;
+    }
+}
+.bgimage{
+    height: 100%;
+    width: 100%;
+}
+
